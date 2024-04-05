@@ -19,52 +19,20 @@
 <body>
   <?php
   include('authentication.php');
+  
   ?>
   <div class="grid-container">
 
     <!-- header -->
-    <header class="header">
-      <div class="menu-icon" >
-      <span class="material-icons-outlined" onclick="openSidebar()">menu</span>      
-      </div>
-      <div class="header-left">
-      <img src="../images/logo.png" alt="upscale logo" width="200px">
-      </div>
-      <div class="header-right">
-      <span class="material-icons-outlined">notifications</span>
-      <span class="material-icons-outlined">account_circle</span>
-      </div>
-    </header>
+    <?php
+     include('header.php');
+    ?>
     <!-- end of header -->
 
     <!-- sidebar -->
-    <aside id="sidebar">
-      <div class="sidebar-title" onclick="closeSidebar()">
-        
-        <span class="material-icons-outlined">close</span>
-      </div>
-
-      <ul class="sidebar-list">
-        <li class="sidebar-list-items">
-        <span class="material-icons-outlined">dashboard</span>Dashboard
-        </li>
-        <li class="sidebar-list-items">
-        <span class="material-icons-outlined">category</span>Category
-        </li>
-        <li class="sidebar-list-items">
-        <span class="material-icons-outlined">event</span>Events
-        </li>
-        <li class="sidebar-list-items">
-        <span class="material-icons-outlined">people</span>Users
-        </li>
-        <li class="sidebar-list-items">
-        <span class="material-icons-outlined">content_paste</span>Bookings
-        </li>
-        <li class="sidebar-list-items">
-        <span class="material-icons-outlined">summarize</span>Report
-        </li>
-      </ul>
-    </aside>
+    <?php
+    include('sidebar.php');
+    ?>
     <!-- end of sidebar -->
 
     <!-- main content -->
