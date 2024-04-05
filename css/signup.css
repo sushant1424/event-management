@@ -5,8 +5,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top:50px;
 }
 .container{
+  
   padding:2vw 0;
   width:500px;
   background-color: white;
@@ -17,12 +19,11 @@
 }
 .container h1{
   text-align: center;
-  padding:0 0 10px 0;
+  padding:0 0 5px 0;
   font-size: 2.5vw;
 }
 .login_link{
   text-align: center;
-  padding:0 0 20px 0;
   font-size: 1.2vw;
   
 }

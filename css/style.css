@@ -1,7 +1,7 @@
 
 .content{
   width:100%;
-  height:calc(100% - 100px);
+  height:calc(100% - 65px);
   display:flex;
   position: relative;
   padding:0vw 5vw;
@@ -47,6 +47,7 @@
   width:45%;
 }
 .right img{
+  margin-top:10px;
   height:100%;
   width:100%;
 }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   <title>Upscale Events</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
         <a href="signup.php"><button>Get Started</button></a>
       </div>
       <div class="right">
-          <img src="images/coverimage.jpg" alt="Event Cover Picture"/>
+          <img src="../images/coverimage.jpg" alt="Event Cover Picture"/>
       </div>
     </div>
   
@@ -27,10 +27,10 @@
   <div class="display-event">
     <h2>We provide services to manage many events.</h2>
     <div class="gallery">
-      <img src="images/birthday.jpg" alt="birthday">
-      <img src="images/marriage.jpg" alt="marriage">
-      <img src="images/babyshower.jpg" alt="babyshower">
-      <img src="images/corportae.jpg" alt="corporate">
+      <img src="../images/birthday.jpg" alt="birthday">
+      <img src="../images/marriage.jpg" alt="marriage">
+      <img src="../images/babyshower.jpg" alt="babyshower">
+      <img src="../images/corportae.jpg" alt="corporate">
     </div>
     <button>Explore Events </button>
   </div>
@@ -39,15 +39,15 @@
     <h2>How it works.</h2>
     <div class="cards">
       <div class="card">
-        <img src="images/userregister.png" alt="User Register Image"/>
+        <img src="../images/userregister.png" alt="User Register Image"/>
         <p>Create account and connect with us.</p>
       </div>
       <div class="card">
-        <img src="images/eventregister.jpg" alt="User Register Image"/>
+        <img src="../images/eventregister.jpg" alt="User Register Image"/>
         <p>Search, create and register many events.</p>
       </div>
       <div class="card">
-        <img src="images/enjoy.jpg" alt="User Register Image"/>
+        <img src="../images/enjoy.jpg" alt="User Register Image"/>
         <p>Enjoy and celebrate your beautiful events.</p>
       </div>
     </div>

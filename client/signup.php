@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/signup.css">
-  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="../css/signup.css">
+  <link rel="stylesheet" href="../css/header.css">
   <meta name="google-signin-client_id" content="304257579480-5ha1je5c6s4kjal2t4no3pjrurvse97d.apps.googleusercontent.com">
   <title>Sign Up</title>
 </head>
@@ -24,6 +24,11 @@
         <label for="username">Username</label>
       </div>
       <div class="txt-field">
+        <input type="tel" required>
+        <span></span>
+        <label for="phone">Phone</label>
+      </div>
+      <div class="txt-field">
         <input type="email" required>
         <span></span>
         <label for="email">Email</label>
@@ -33,11 +38,7 @@
         <span></span>
         <label for="password">Password</label>
       </div>
-      <div class="txt-field">
-        <input type="password" required>
-        <span></span>
-        <label for="confirm">Password Confirmation</label>
-      </div>
+      
       <button>Sign Up</button>
     
       </form>

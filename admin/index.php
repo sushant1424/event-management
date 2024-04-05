@@ -17,6 +17,9 @@
 </head>
 
 <body>
+  <?php
+  include('config/dbconnect.php');
+  ?>
   <div class="grid-container">
 
     <!-- header -->
