@@ -48,7 +48,7 @@ include('authentication.php');
                 
                 ?>
                 
-              <form action="edit_code.php" method="POST">
+              <form action="alter_code.php" method="POST">
                 <input type="hidden" name="user_id "value="<?=$user['u_id'];?>">
                 <div class="row">
                   <div class="col-md-6 mb-3">

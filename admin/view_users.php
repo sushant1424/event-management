@@ -34,7 +34,9 @@ include("authentication.php");
       ?>
       <div class="card">
         <div class="card-header">
-            <h4>Registered Users</h4>
+            <h4>Registered Users
+              <a href="add_user.php" class="btn btn-primary float-end">Add Admin/User</a>
+            </h4>
         </div>
         <div class="card-body">
           <table class="table table-bordered">
