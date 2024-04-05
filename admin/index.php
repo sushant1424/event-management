@@ -21,10 +21,12 @@
 
     <!-- header -->
     <header class="header">
-      <div class="menu-icon" onclick="openSidebar()">
-      <span class="material-icons-outlined">menu</span>      
+      <div class="menu-icon" >
+      <span class="material-icons-outlined" onclick="openSidebar()">menu</span>      
       </div>
-      
+      <div class="header-left">
+      <img src="../images/logo.png" alt="upscale logo" width="200px">
+      </div>
       <div class="header-right">
       <span class="material-icons-outlined">notifications</span>
       <span class="material-icons-outlined">account_circle</span>
@@ -34,10 +36,8 @@
 
     <!-- sidebar -->
     <aside id="sidebar">
-      <div class="sidebar-title">
-        <div class="sidebar-brand">
-          <img src="../images/logo.png" alt="upscale logo" width="200px">
-        </div>
+      <div class="sidebar-title" onclick="closeSidebar()">
+        
         <span class="material-icons-outlined">close</span>
       </div>
 
@@ -132,6 +132,6 @@
     </main>
     <!-- end of main -->
   </div>
+  <script src="js/script.js"></script>
 </body>
-
 </html>

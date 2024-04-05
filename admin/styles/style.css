@@ -19,20 +19,20 @@ body {
   display: grid;
   grid-template-columns: 260px 1fr 1fr 1fr;
   grid-template-rows: 0.2fr 3fr;
-  grid-template-areas: "sidebar header header header "
+  grid-template-areas: "header header header header "
   "sidebar main main main";
   height:100vh;
 
 }
 
-/*-----header--------*/
+/*--------------header-----------------*/
 .header {
   grid-area: header;
   height:70px;
-  background-color: #f1f2f5;
+  background-color: #ffffff;
   display:flex;
   align-items: center;
-  justify-content: end;
+  justify-content: space-between;
   padding:0 30px 0 30px;
   box-shadow: 0 6px 7px -4px rgba(0,0,0,0.2);
 }
@@ -44,12 +44,12 @@ body {
   display: none;
 }
 
-/*-----sidebar--------*/
+/*-----------------sidebar----------------*/
 #sidebar {
   grid-area: sidebar;
   height:100%;
-  background-color: white;
-  color:#070707;
+  background-color: #21232d;
+  color:#9799ab;
   overflow-y: auto;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
@@ -82,7 +82,7 @@ body {
   padding-right:10px;
 }
 .sidebar-list-items:hover{
-  background-color: rgba(10, 9, 9, 0.2);
+  background-color: rgba(225, 225, 225, 0.2);
   cursor: pointer;
 }
 .sidebar-responsive{
@@ -90,7 +90,7 @@ body {
   position: absolute;
 }
 
-/*-----main--------*/
+/*--------------main---------------*/
 .main-container {
   grid-area:main;
   overflow-y :auto;
@@ -101,7 +101,7 @@ body {
   justify-content: space-between;
 }
 .main-title > p{
-  font-size: 1.4vw;
+  font-size: 20px;
   color: #070707;
   font-weight: 600;
 }
@@ -151,7 +151,7 @@ body {
   justify-content: space-between;
 }
 .card-inner > p{
-  font-size: 1.2vw;
+  font-size: 18px;
   color:black;
   font-weight: 500;
 }
@@ -160,7 +160,46 @@ body {
   font-size: 35px;
 }
 .quantity{
-  font-size: 2vw;
+  font-size: 18px;
   color:black;
-  font-weight: 500;
+  font-weight: 600;
+}
+
+/* ------------media queries ------------*/
+/* Medium <=992px */
+@media screen and (max-width: 992px){
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas: 
+    "header"
+    "main";
+  }
+
+  #sidebar{
+    display: none;
+  }
+  .menu-icon{
+    display:inline;
+  }
+  .sidebar-title > span {
+    display:inline;
+  }
+}
+
+/*Small <=768px */
+@media screen and (max-width:768px){
+  .main-cards{
+    grid-template-columns: 1fr;
+    gap:10px;
+    margin-bottom: 0;
+  }
+}
+
+/*Extra Small <=576px */
+@media screen and (max-width:576px) {
+  .header-left{
+    display: none;
+  }
+  
 }
