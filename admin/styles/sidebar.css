@@ -34,11 +34,14 @@
 .sidebar-list-items > span{
   padding-right:10px;
 }
-
+.sidebar-list-items strong{
+  color:white;
+}
 .sidebar-list-items:hover{
   color:white;
   cursor: pointer;
 }
+
 .sidebar-responsive{
   display:inline !important;
   position: absolute;

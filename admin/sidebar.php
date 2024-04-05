@@ -15,7 +15,7 @@
 
       <ul class="sidebar-list ">
         <li class="sidebar-list-items ">
-        <span class="material-icons-outlined">dashboard</span><a href="index.php" class="text-decoration none">Dashboard</a>
+        <span class="material-icons-outlined">dashboard</span><a href="index.php" class="text-decoration-none" ><span class= "text-secondary">Dashboard</span></a>
         </li>
         <li class="sidebar-list-items">
         <span class="material-icons-outlined">category</span>Categories
@@ -24,7 +24,7 @@
         <span class="material-icons-outlined">event</span>Events
         </li>
         <li class="sidebar-list-items">
-        <span class="material-icons-outlined">people</span><a href="view_users.php">Users</a>
+        <span class="material-icons-outlined">people</span><a href="view_users.php" class="text-decoration-none"><span class="text-secondary ">Users</span></a>
         </li>
         <li class="sidebar-list-items">
         <span class="material-icons-outlined">content_paste</span>Bookings
