@@ -1,7 +1,7 @@
 //sidebar toggle
 
-var sidebarOpen = false;
-var sidebar = document.getElementById("sidebar");
+let sidebarOpen = false;
+let sidebar = document.getElementById("sidebar");
 
 function openSidebar()
 {
@@ -13,7 +13,7 @@ function openSidebar()
 
 function closeSidebar()
 {
-  if(sidebaroOpen){
+  if(sidebarOpen){
     sidebar.classList.remove("sidebar-responsive");
     sidebarOpen = false;
   }
