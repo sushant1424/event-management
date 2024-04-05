@@ -18,7 +18,7 @@
 
 <body>
   <?php
-  include('config/dbconnect.php');
+  include('authentication.php');
   ?>
   <div class="grid-container">
 
