@@ -75,8 +75,11 @@ include("authentication.php");
                           ?>
                         </td>
                         <td><a href="edit_user.php?id=<?= $row['u_id'];?>" class="btn btn-danger">Edit</a></td>
-                        <td><a href="delete_user.php" class="btn btn-success">Delete</a></td>
-                        
+                        <td>
+                          <form action="alter_code.php" method="POST">
+                          <button type="submit" name="delete_user" value="<?=$row['u_id'];?>" class="btn btn-success">Delete</button>
+                        </form>
+                        </td>
                     </tr>
                     <?php
                   }

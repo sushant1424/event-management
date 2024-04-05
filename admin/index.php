@@ -46,15 +46,15 @@
 
         <div class="card">
           <div class="card-inner">
-            <p class="text-primary">Categories</p>
-            <span class="material-icons-outlined text-blue">category</span>
+            <p >Categories</p>
+            <span class="material-icons-outlined ">category</span>
           </div>
           <div class="quantity">7</div>
         </div>
 
         <div class="card">
           <div class="card-inner">
-            <p class="text-primary">Total Events</p>
+            <p >Total Events</p>
             <span class="material-icons-outlined text-blue">event</span>
           </div>
           <div class="quantity">7</div>
@@ -62,15 +62,26 @@
 
         <div class="card">
           <div class="card-inner">
-            <p class="text-primary">Total reg. Users</p>
+            <p >Total reg. Users</p>
             <span class="material-icons-outlined text-blue">people</span>
           </div>
-          <div class="quantity">7</div>
+          <?php
+          $dash_reg_users_query = "SELECT * FROM new_users";
+          $dash_reg_users_query_run = mysqli_query($conn, $dash_reg_users_query);
+          if($reg_users_total = mysqli_num_rows($dash_reg_users_query_run))
+          {
+              echo '<div class="quantity">'.$reg_users_total.'</div>';
+          }
+          else{
+                echo '<div class="quantity">No data</div>';
+          }
+          ?>
+          
         </div>
 
         <div class="card">
           <div class="card-inner">
-            <p class="text-primary">Total Bookings</p>
+            <p >Total Bookings</p>
             <span class="material-icons-outlined text-blue">content_paste</span>
           </div>
           <div class="quantity">7</div>
@@ -78,24 +89,24 @@
 
         <div class="card">
           <div class="card-inner">
-            <p class="text-primary">New Booking</p>
-            <span class="material-icons-outlined text-blue">content_paste</span>
+            <p >New Booking</p>
+            <span class="material-icons-outlined ">content_paste</span>
           </div>
           <div class="quantity">7</div>
         </div>
 
         <div class="card">
           <div class="card-inner">
-            <p class="text-primary">Confirmed Bookings</p>
-            <span class="material-icons-outlined text-blue">content_paste</span>
+            <p >Confirmed Bookings</p>
+            <span class="material-icons-outlined ">content_paste</span>
           </div>
           <div class="quantity">7</div>
         </div>
         
         <div class="card">
           <div class="card-inner">
-            <p class="text-primary">Cancelled Bookings</p>
-            <span class="material-icons-outlined text-blue">content_paste</span>
+            <p >Cancelled Bookings</p>
+            <span class="material-icons-outlined ">content_paste</span>
           </div>
           <div class="quantity">7</div>
         </div>

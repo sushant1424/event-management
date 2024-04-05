@@ -1,6 +1,26 @@
 <?php
 include("authentication.php");
 
+if(isset($_POST['delete_user']))
+{
+  $user_id = $_POST['delete_user'];
+  $query = "DELETE FROM new_users WHERE u_id = '$user_id'";
+  $query_run = mysqli_query($conn, $query);
+  if($query_run)
+  {
+    $_SESSION['message'] = "Deleted Successfully";
+    header("Location: view_users.php");
+    exit(0);
+  }
+  else
+  {
+    $_SESSION['message'] = "Couldnot add user/admin";
+    header("Location: view_users.php");
+    exit(0);
+  }
+
+}
+
 if(isset($_POST['add_user']))
 {
   $username = $_POST['username'];
