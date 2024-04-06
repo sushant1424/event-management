@@ -18,7 +18,11 @@ include('authentication.php');
     <main class="main-container">
       
       <div class="container-fluid px-4">
-        
+      <h4 class="mt-4">View Categories</h4>
+        <ol class="breadcrumb mb-4">
+          <li class="breadcrumb-item active">Dashboard</li>
+          <li class="breadcrumb-item">Categories</li>
+        </ol>
       </div>
     <div class="row mt-4">
       <div class="col-md-12">
@@ -28,7 +32,7 @@ include('authentication.php');
         <div class="card">
           <div class="card-header">
               <h4>View Categories
-              <a href="add_category.php" class="btn btn-danger float-end">Back</a>
+              <a href="add_category.php" class="btn btn-danger float-end">Add Category</a>
               </h4>
           </div>
           <div class="card-body">
@@ -48,7 +52,7 @@ include('authentication.php');
               </thead>
               <tbody>
               <?php
-            $category = "SELECT * FROM categories";
+            $category = "SELECT * FROM categories WHERE status!='2'";
             $category_run = mysqli_query($conn, $category);
 
             if(mysqli_num_rows($category_run) > 0)
@@ -70,10 +74,12 @@ include('authentication.php');
                     ?>
                   </td>
                   <td>
-                    <a href="" class="btn btn-danger">Edit</a>
+                    <a href="edit_category.php?id=<?=$item['c_id'] ?>" class="btn btn-danger">Edit</a>
                   </td>
                   <td>
-                    <a href="" class="btn btn-info">Delete</a>
+                    <form action="alter_code.php" method="POST">
+                    <button type="submit" name="delete_category" value="<?$item['c_id']?>" class="btn btn-info">Delete</a>
+                    </form>
                   </td>
                   </tr>
                   <?php
