@@ -16,7 +16,6 @@ include('authentication.php');
     include('sidebar.php');
     ?>
     <main class="main-container">
-      <div class="users_container">
       <div class="container-fluid px-4">
         <h4 class="mt-4">Users</h4>
         <ol class="breadcrumb mb-4">
@@ -73,7 +72,7 @@ include('authentication.php');
     </div>
     </div>
     </div>
-    </div>
+    
     </main>
   </div>
 </body>

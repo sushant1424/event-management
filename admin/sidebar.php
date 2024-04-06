@@ -18,7 +18,7 @@
         <a href="index.php" class="text-decoration-none text-white"><span class="material-icons-outlined">dashboard</span> <div class="d-inline p-2">Dashboard</div></a>
         </li>
         <li class="sidebar-list-items">
-        <a href="add_category.php" class="text-decoration-none text-white"><span class="material-icons-outlined ">category</span> <div class="d-inline p-2">Categories</div></a>
+        <a href="view_category.php" class="text-decoration-none text-white"><span class="material-icons-outlined ">category</span> <div class="d-inline p-2">Categories</div></a>
         
         </li>
         <li class="sidebar-list-items">
