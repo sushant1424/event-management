@@ -157,4 +157,39 @@ if(isset($_POST['update_category']))
 
 }
 
+//------------------add events-----------//
+if(isset($_POST['add_events'])){
+
+  $category_id = $_POST['category_id'];
+  $name = $_POST['name'];
+  $slug = $_POST['slug'];
+  $description = $_POST['description'];
+
+  $image= $_FILES['image']['name'];
+  //rename this image
+  $image_extension = pathinfo($image, PATHINFO_EXTENSION);
+  $filename = time().'.'.$image_extension;
+  $meta_title = $_POST['meta_title'];
+  $meta_description = $_POST['meta_description'];
+  $meta_keyword = $_POST['meta_keyword'];
+  $status = $_POST['status'] == true ? '1' : '0';
+
+  $query = "INSERT INTO events(c_id,name,slug,description,image,meta_title,meta_description,meta_keyword,status) values('$category_id','$name','$slug',' $description','$filename','$meta_title','$meta_description','$meta_keyword','$status')";
+
+  $query_run = mysqli_query($conn,$query);
+  if($query_run)
+  {
+    move_uploaded_file($_FILES['image']['tmp_name'],'../images/'.$filename);
+    $_SESSION['message'] = "Event Added Successfully";
+    header("Location: add_events.php");
+    exit(0);
+  }
+  else{
+    $_SESSION['message'] = "Event  Addition Failed!";
+    header("Location: add_events.php");
+    exit(0);
+  }
+
+}
+
 ?>
