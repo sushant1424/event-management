@@ -46,10 +46,20 @@
 
         <div class="card">
           <div class="card-inner">
-            <p >Categories</p>
+            <p >Total Categories</p>
             <span class="material-icons-outlined ">category</span>
           </div>
-          <div class="quantity">7</div>
+          <?php
+          $dash_categories_query = "SELECT * FROM categories";
+          $dash_categories_query_run = mysqli_query($conn, $dash_categories_query);
+          if($categories_total = mysqli_num_rows($dash_categories_query_run))
+          {
+              echo '<div class="quantity">'.$categories_total.'</div>';
+          }
+          else{
+                echo '<div class="quantity">No data</div>';
+          }
+          ?>
         </div>
 
         <div class="card">
@@ -84,7 +94,7 @@
             <p >Total Bookings</p>
             <span class="material-icons-outlined text-blue">content_paste</span>
           </div>
-          <div class="quantity">7</div>
+          <div class="quantity"></div>
         </div>
 
         <div class="card">
@@ -92,7 +102,7 @@
             <p >New Booking</p>
             <span class="material-icons-outlined ">content_paste</span>
           </div>
-          <div class="quantity">7</div>
+          <div class="quantity"></div>
         </div>
 
         <div class="card">
@@ -100,7 +110,7 @@
             <p >Confirmed Bookings</p>
             <span class="material-icons-outlined ">content_paste</span>
           </div>
-          <div class="quantity">7</div>
+          <div class="quantity"></div>
         </div>
         
         <div class="card">
@@ -108,7 +118,7 @@
             <p >Cancelled Bookings</p>
             <span class="material-icons-outlined ">content_paste</span>
           </div>
-          <div class="quantity">7</div>
+          <div class="quantity"></div>
         </div>
       </div>
     </main>
