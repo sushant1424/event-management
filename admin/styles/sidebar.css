@@ -29,7 +29,7 @@
   list-style-type: none;
 }
 .sidebar-list-items{
-  padding:30px;
+  padding:20px;
 }
 .sidebar-list-items > span{
   padding-right:10px;
@@ -38,9 +38,10 @@
   color:white;
 }
 .sidebar-list-items:hover{
-  color:white;
+  background-color: #0c0c0c;
   cursor: pointer;
 }
+
 
 .sidebar-responsive{
   display:inline !important;

@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="styles/header.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+  
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   <!-- Material icons -->
@@ -27,8 +27,20 @@
       <div class="header-right">
       <span class="material-icons-outlined">notifications</span>
       <span class="material-icons-outlined">account_circle</span>
+      <div class="dropdown">
+      
+      <div class="dropdown-content">
+      
+      
       </div>
-      <script src="js/script.js"></script>
+      </div>
+
+
+
+
+      
+      </div>
+      <script src="scripts/script.js"></script>
 
     </header>
 

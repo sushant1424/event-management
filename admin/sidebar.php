@@ -15,25 +15,26 @@
 
       <ul class="sidebar-list ">
         <li class="sidebar-list-items ">
-        <span class="material-icons-outlined">dashboard</span><a href="index.php" class="text-decoration-none" ><span class= "text-secondary">Dashboard</span></a>
+        <a href="index.php" class="text-decoration-none text-white"><span class="material-icons-outlined">dashboard</span> <div class="d-inline p-2">Dashboard</div></a>
         </li>
         <li class="sidebar-list-items">
-        <span class="material-icons-outlined">category</span>Categories
+        <a href="add_category.php" class="text-decoration-none text-white"><span class="material-icons-outlined ">category</span> <div class="d-inline p-2">Categories</div></a>
+        
         </li>
         <li class="sidebar-list-items">
-        <span class="material-icons-outlined">event</span>Events
+        <a href="events.php" class="text-decoration-none text-white"><span class="material-icons-outlined">event</span> <div class="d-inline p-2">Events</div></a>
         </li>
         <li class="sidebar-list-items">
-        <span class="material-icons-outlined">people</span><a href="view_users.php" class="text-decoration-none"><span class="text-secondary ">Users</span></a>
+        <a href="view_users.php" class="text-decoration-none text-white"><span class="material-icons-outlined">people</span> <div class="d-inline p-2">Users</div></a>
         </li>
         <li class="sidebar-list-items">
-        <span class="material-icons-outlined">content_paste</span>Bookings
+        <a href="bookings.php" class=" text-decoration-none text-white"><span class="material-icons-outlined">content_paste</span> <div class="d-inline p-2">Bookings</div></a>
         </li>
         <li class="sidebar-list-items">
-        <span class="material-icons-outlined">summarize</span>Report
+        <a href="report.php" class="text-decoration-none text-white"><span class="material-icons-outlined">summarize</span> <div class="d-inline p-2">Report</div></a>
         </li>
       </ul>
-      <script src="js/script.js"></script>
+      <script src="scripts/script.js"></script>
 
     </aside>
 

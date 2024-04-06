@@ -15,7 +15,6 @@
   ?>
 
   <main class="main-container">
-    <div class="users_container">
     <div class="container-fluid px-4">
       <h1 class="mt-4">Bookings</h1>
       <ol class="breadcrumb mb-4">
@@ -33,7 +32,6 @@
         <div class="card-body"></div>
       </div>
     </div>
-  </div>
 </div>
 </main>
 

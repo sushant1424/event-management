@@ -7,7 +7,11 @@ include("authentication.php");
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/view_users.css">
- 
+  
+  <script src="scripts/script.js">
+  </script>
+
+
   <title>View Users</title>
 </head>
 <body>
@@ -18,7 +22,7 @@ include("authentication.php");
   ?>
 
   <main class="main-container">
-    <div class="users_container">
+    
     <div class="container-fluid px-4">
       <h4 class="mt-4">Users</h4>
       <ol class="breadcrumb mb-4">
@@ -39,7 +43,7 @@ include("authentication.php");
             </h4>
         </div>
         <div class="card-body">
-          <table class="table table-bordered">
+          <table class="table table-bordered" id="userTable">
             <thead>
               <tr>
                 <th>User ID</th>
@@ -100,7 +104,7 @@ include("authentication.php");
           </table>
         </div>
       </div>
-    </div>
+   
   </div>
 </div>
 </main>
