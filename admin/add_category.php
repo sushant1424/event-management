@@ -17,13 +17,7 @@ include('authentication.php');
     ?>
     <main class="main-container">
       
-      <div class="container-fluid px-4">
-        <h4 class="mt-4">Categories</h4>
-        <ol class="breadcrumb mb-4">
-          <li class="breadcrumb-item active">Dashboard</li>
-          <li class="breadcrumb-item">Categories</li>
-        </ol>
-      </div>
+      
     <div class="row">
       <div class="col-md-12">
         <?php
@@ -32,7 +26,7 @@ include('authentication.php');
         <div class="card">
           <div class="card-header">
               <h4>Add Categories
-              <a href="view_category.php" class="btn btn-danger float-end">View Categories</a>
+              <a href="view_category.php" class="btn btn-danger float-end">Back</a>
               </h4>
           </div>
           <div class="card-body">
