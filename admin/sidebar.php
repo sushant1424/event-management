@@ -22,7 +22,7 @@
         
         </li>
         <li class="sidebar-list-items">
-        <a href="events.php" class="text-decoration-none text-white"><span class="material-icons-outlined">event</span> <div class="d-inline p-2">Events</div></a>
+        <a href="view_events.php" class="text-decoration-none text-white"><span class="material-icons-outlined">event</span> <div class="d-inline p-2">Events</div></a>
         </li>
         <li class="sidebar-list-items">
         <a href="view_users.php" class="text-decoration-none text-white"><span class="material-icons-outlined">people</span> <div class="d-inline p-2">Users</div></a>
