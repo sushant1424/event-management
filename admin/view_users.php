@@ -6,7 +6,7 @@ include("authentication.php");
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/view_users.css">
+  <link rel="stylesheet" href="styles/main.css">
   
   <script src="scripts/script.js">
   </script>
@@ -78,7 +78,7 @@ include("authentication.php");
                           }
                           ?>
                         </td>
-                        <td><a href="edit_user.php?id=<?= $row['u_id'];?>" class="btn btn-danger">Edit</a></td>
+                        <td><a href="edit_user.php?id=<?= $row['u_id'];?>"  class="btn btn-danger">Edit</a></td>
                         <td>
                           <form action="alter_code.php" method="POST">
                           <button type="submit" name="delete_user" value="<?=$row['u_id'];?>" class="btn btn-success">Delete</button>

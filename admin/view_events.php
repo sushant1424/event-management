@@ -6,7 +6,7 @@ include('authentication.php');
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/view_events.css">
+  <link rel="stylesheet" href="styles/main.css">
   <title>Document</title>
 </head>
 <body>
@@ -66,9 +66,9 @@ include('authentication.php');
                   <td><?= $item['e_id']?></td>
                   <td><?= $item['name']?></td>
                   <td><?= $item['c_name']?></td>
-                  <td>
-                  <img src="../images/1712426760.jpg" alt="" width="60px" height="60px">
+                  <td><img src="../images/<?= $item['image']?>" alt="" width="60px" height="60px">
                   </td>
+                  
 
                   <td>
                     <?php

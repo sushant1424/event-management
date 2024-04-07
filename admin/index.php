@@ -67,7 +67,17 @@
             <p >Total Events</p>
             <span class="material-icons-outlined text-blue">event</span>
           </div>
-          <div class="quantity">7</div>
+          <?php
+          $dash_events_query = "SELECT * FROM events";
+          $dash_events_query_run = mysqli_query($conn, $dash_events_query);
+          if($events_total = mysqli_num_rows($dash_events_query_run))
+          {
+              echo '<div class="quantity">'.$events_total.'</div>';
+          }
+          else{
+                echo '<div class="quantity">No data</div>';
+          }
+          ?>
         </div>
 
         <div class="card">

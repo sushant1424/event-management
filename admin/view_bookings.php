@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/view_bookings.css">
+  <link rel="stylesheet" href="styles/main.css">
  
   <title>View Users</title>
 </head>

@@ -181,15 +181,107 @@ if(isset($_POST['add_events'])){
   {
     move_uploaded_file($_FILES['image']['tmp_name'],'../images/'.$filename);
     $_SESSION['message'] = "Event Added Successfully";
-    header("Location: add_events.php");
+    header("Location: view_events.php");
     exit(0);
   }
   else{
     $_SESSION['message'] = "Event  Addition Failed!";
-    header("Location: add_events.php");
+    header("Location: view_events.php");
     exit(0);
   }
 
 }
+
+//--------update events-------------//
+if(isset($_POST['update_events']))
+{
+  $category_id = $_POST['category_id'];
+
+  $events_id = $_POST['events_id'];
+  $name = $_POST['name'];
+  $slug = $_POST['slug'];
+  $description = $_POST['description'];
+  $old_filename = $_POST['old_image'];
+  $image= $_FILES['image']['name'];
+  $update_filename = '';
+  if($image!=NULL)
+  {
+    $image_extension = pathinfo($image, PATHINFO_EXTENSION);
+    $filename = time().'.'.$image_extension;
+    $update_filename = $filename;
+  }
+  else
+  {
+    $update_filename = $old_filename;
+  }
+  
+ 
+  $meta_title = $_POST['meta_title'];
+  $meta_description = $_POST['meta_description'];
+  $meta_keyword = $_POST['meta_keyword'];
+  $status = $_POST['status'] == true ? '1' : '0';
+
+  
+  $query = "UPDATE events SET c_id = '$category_id',name = '$name', slug = '$slug', description = '$description' ,image='$update_filename', meta_title = '$meta_title' , meta_description = '$meta_description', meta_keyword = '$meta_keyword' , status = '$status' where e_id = '$events_id'";
+
+  $query_run = mysqli_query($conn, $query);
+  if($query_run)
+  {
+    if($image!=NULL)
+    {
+      if(file_exists('../images/'.$old_filename)){
+        unlink("../images/".$old_filename);
+      
+      move_uploaded_file($_FILES['image']['tmp_name'],'../images/'.$update_filename);
+      }
+    }
+    $_SESSION['message'] = "Event Updated Successfully";
+    header('Location: view_events.php?id= '.$events_id);
+    exit(0);
+  }
+  else{
+    $_SESSION['message'] = "Event Updation Failed!";
+    header('Location: view_events.php'.$events_id);
+    exit(0);
+  }
+  }
+  //---------------delete events------------------//
+
+  if(isset($_POST['delete_events']))
+{
+  $events_id = $_POST['delete_events'];
+  $check_img_query = "SELECT * FROM events where e_id = '$events_id'";
+  $img_res = mysqli_query($conn, $check_img_query);
+  $res_data = mysqli_fetch_array($img_res);
+  $image = $res_data['image'];
+
+  $query = "DELETE FROM events where e_id = '$events_id'";
+  $query_run = mysqli_query($conn, $query);
+
+  
+  if($query_run)
+  {
+    
+      if(file_exists('../images/'.$image)){
+        unlink("../images/".$image);      
+      }
+    
+    $_SESSION['message'] = "Event Removed Successfully";
+    header('Location: view_events.php ');
+    exit(0);
+  }
+  else{
+    $_SESSION['message'] = "Event Remove Failed!";
+    header('Location: view_events.php');
+    exit(0);
+  }
+
+
+
+  }
+  
+
+
+  
 
 ?>
