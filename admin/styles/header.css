@@ -32,6 +32,11 @@ body {
 .menu-icon{
   display: none;
 }
+
+.sidebar-responsive{
+  display:inline !important;
+  position: absolute;
+}
 .dropdown {
   position: relative;
   display: inline-block;
@@ -86,10 +91,9 @@ body {
 .logout_button:hover{
   background-color:#f1f1f1 ;
 }
-.sidebar-responsive{
-  display:inline !important;
-  position: absolute;
-}
+
+
+
 /* ------------media queries ------------*/
 /* Medium <=992px */
 @media screen and (max-width: 992px){
