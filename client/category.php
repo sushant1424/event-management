@@ -45,7 +45,7 @@
           <a href="">
             <p class="view_details">View Details</p>
           </a>
-          <button>Book</button>
+          <button>Get in</button>
         </div>
       </div>
 
