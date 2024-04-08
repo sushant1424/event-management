@@ -42,8 +42,8 @@
         </li>
         </a>
 
-        <a href="bookings.php" class=" text-decoration-none text-white">
-        <li class="sidebar-list-items <?= $page == 'bookings.php' ? 'active bg-black ':''; ?>">
+        <a href="view_bookings.php" class=" text-decoration-none text-white">
+        <li class="sidebar-list-items <?= $page == 'view_bookings.php' ? 'active bg-black ':''; ?>">
         <span class="material-icons-outlined">content_paste</span> <div class="d-inline ">Bookings</div>
         </li>
         </a>
@@ -57,7 +57,7 @@
         
         </li>
       </ul>
-      <script src="scripts/script.js"></script>
+      <script src="../scripts/script.js"></script>
 
     </aside>
 
