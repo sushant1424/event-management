@@ -30,20 +30,36 @@
       </div>
       <div class="header-right">
       <span class="material-icons-outlined">notifications</span>
-      <span class="material-icons-outlined">account_circle</span>
-      <div class="dropdown">
+
+      <?php if(isset($_SESSION['auth_user'])) : ?>
+  <div class="dropdown">
+  <a href=""><h4>Hello! <?= $_SESSION['auth_user']['user_name']?></h4>
+  <div class="dropdown-content">
+    
+    <a href="logout.php">My Profile</a>
+    <form action="allcode.php" method="POST">
+        <button type="submit" name="logout_button" class="logout_button">Log Out</button>
+    </form>
+    
+    
+ 
+  </div>
+</div>
+
+
+    <?php else :?>
+      <span class="material-icons-outlined ">account_circle</span>
+
+    <?php endif; ?>
+  <i class="ri-menu-line"></i>
+    </div>
+
       
-      <div class="dropdown-content">
-      
-      
-      </div>
-      </div>
 
 
 
 
       
-      </div>
       <script src="scripts/script.js"></script>
 
       <!-- alertify js -->
@@ -60,6 +76,7 @@
         ?>
          
       </script>
+      
 
 
     </header>

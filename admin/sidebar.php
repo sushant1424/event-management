@@ -54,9 +54,7 @@
         </li>
         </a>
 
-        <li class="sidebar-list-items">
-          
-        <a href="../client/login.php" class="text-decoration-none text-white"><span class="material-icons-outlined">people</span> <div class="d-inline p-2">Log Out</div></a>
+        
         </li>
       </ul>
       <script src="scripts/script.js"></script>
