@@ -39,7 +39,7 @@ include('authentication.php');
             
                 
           <div class="table-responsive">
-            <table class="table table-bordered table-stripe">
+            <table class="table table-bordered table-stripe" id="myTable">
               <thead>
                 <tr>
                   <th>ID</th>

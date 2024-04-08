@@ -6,13 +6,14 @@ include("authentication.php");
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
   <link rel="stylesheet" href="styles/main.css">
   
-  <script src="scripts/script.js">
+
+
+  
   </script>
-
-
-  <title>View Users</title>
 </head>
 <body>
   <div class="grid-container">
@@ -43,7 +44,7 @@ include("authentication.php");
             </h4>
         </div>
         <div class="card-body">
-          <table class="table table-bordered" id="userTable">
+          <table class="table table-bordered" id="myTable">
             <thead>
               <tr>
                 <th>User ID</th>
