@@ -17,6 +17,9 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
 
+  <!-- datatable with bootstrap -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" />
+
   <title>header</title>
 </head>
 <body>
@@ -60,7 +63,7 @@
 
 
       
-      <script src="scripts/script.js"></script>
+      <script src="../scripts/script.js"></script>
 
       <!-- alertify js -->
       <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
@@ -76,7 +79,15 @@
         ?>
          
       </script>
-      
+      <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+
+<script>
+  $(document).ready( function () {
+    $('#myTable').DataTable();
+  });
+</script>
 
 
     </header>
