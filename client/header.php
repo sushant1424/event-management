@@ -1,3 +1,6 @@
+<?php
+include('../admin/config/dbconnect.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +13,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+<!--alertify js-->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+
 
   <title>Header</title>
 </head>
@@ -25,7 +33,7 @@
     <nav>
     <a href="about.php"><h4>About</h4></a>
     <a href="services.php"><h4>Services</h4></a>
-    <a href="events.php"><h4>Events</h4></a>
+    <a href="category.php"><h4>Events</h4></a>
     <a href="contact.php"><h4>Contact</h4></a>
 </nav>
 
@@ -53,6 +61,19 @@
     </div>
 
 
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+      <script>
+        <?php
+        if(isset($_SESSION['message'])){
+          ?>
+          alertify.set('notifier','position', 'top-center');
+          alertify.success('<?=  $_SESSION["message"]?>');
+        <?php
+        }
+        unset($_SESSION['message']);
+        ?>
+         
+      </script>
   </header>
 </body>
 </html>

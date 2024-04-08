@@ -1,0 +1,31 @@
+.events_container{
+  padding:2vw 5vw;
+}
+.categories{
+  height:60px;
+  width:100%;
+  background-color: #faf9f9;
+  display: flex;
+  border-radius: 35px;
+  border:1px solid #000000; 
+  padding:0 2vw;
+}
+.categories li{
+  width:100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+}
+
+.categories li a{
+  text-decoration: none;
+  color:black;
+  padding:1vw 2vw;
+  transition: all 0.5s;
+  border-radius: 15px;
+}
+.categories a:hover{
+  background-color: #b1a7a6;
+}
