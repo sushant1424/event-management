@@ -19,7 +19,6 @@
 <body>
   <?php
   include('authentication.php');
-  
   ?>
   <div class="grid-container">
 
