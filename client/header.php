@@ -33,8 +33,10 @@ include('../admin/config/dbconnect.php');
     <nav>
     <a href="about.php"><h4>About</h4></a>
     <a href="services.php"><h4>Services</h4></a>
-    <a href="category.php"><h4>Events</h4></a>
+    <a href="category.php?category_title=social-events"><h4>Events</h4></a>
     <a href="contact.php"><h4>Contact</h4></a>
+    <a href="login.php"><h4>Admin Login</h4></a>
+
 </nav>
 
 <?php if(isset($_SESSION['auth_user'])) : ?>

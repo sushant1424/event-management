@@ -2,6 +2,10 @@
   width:100%;
   height:80px;
   background-color: #C8F2D5;
-  margin-top:50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h3{
 }
 

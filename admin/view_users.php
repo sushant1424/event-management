@@ -60,6 +60,7 @@ include("authentication.php");
               <?php
               $query = "SELECT * from new_users";
               $query_run = mysqli_query($conn, $query);
+              
 
               if(mysqli_num_rows( $query_run ) > 0) {
                   foreach($query_run as $row){
@@ -81,9 +82,7 @@ include("authentication.php");
                         </td>
                         <td><a href="edit_user.php?id=<?= $row['u_id'];?>"  class="btn btn-danger">Edit</a></td>
                         <td>
-                          <form action="alter_code.php" method="POST">
-                          <button type="submit" name="delete_user" value="<?=$row['u_id'];?>" class="btn btn-success">Delete</button>
-                        </form>
+                          <button type="button"  value="<?=$row['u_id'];?>" class="btn btn-success delete_user">Delete</button>
                         </td>
                     </tr>
                     <?php
@@ -99,10 +98,12 @@ include("authentication.php");
 
               }
               ?>
-              
             </tbody>
-
+              
           </table>
+              <form action="export.php" method="POST">
+                <button name="export_excel" class="btn btn-success mt-4"> Export to Excel</button>
+              </form>
         </div>
       </div>
    

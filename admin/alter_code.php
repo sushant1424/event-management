@@ -165,9 +165,12 @@ if(isset($_POST['add_events'])){
   $slug = $_POST['slug'];
   $description = $_POST['description'];
 
+  //getting file name
   $image= $_FILES['image']['name'];
   //rename this image
+  //getting extension info of path
   $image_extension = pathinfo($image, PATHINFO_EXTENSION);
+  //giving unique name to filename by appending current timestamp();
   $filename = time().'.'.$image_extension;
   $meta_title = $_POST['meta_title'];
   $meta_description = $_POST['meta_description'];
@@ -246,39 +249,38 @@ if(isset($_POST['update_events']))
   }
   }
   //---------------delete events------------------//
-
-  if(isset($_POST['delete_events']))
+if(isset($_POST['delete_events']))
 {
   $events_id = $_POST['delete_events'];
-  $check_img_query = "SELECT * FROM events where e_id = '$events_id'";
-  $img_res = mysqli_query($conn, $check_img_query);
-  $res_data = mysqli_fetch_array($img_res);
-  $image = $res_data['image'];
 
-  $query = "DELETE FROM events where e_id = '$events_id'";
+  $query = "DELETE FROM events where e_id = '$events_id' limit 1";
   $query_run = mysqli_query($conn, $query);
 
-  
-  if($query_run)
+  $check_img_query = "SELECT * FROM events where e_id = '$events_id' limit 1";
+  $img_res = mysqli_query($conn, $check_img_query);
+  $res_data = mysqli_fetch_all( $img_res );
+  $image = $res_data['image'];
+
+  if($query_run){
+    if(file_exists('../images/'.$image)){
+      unlink("../images/".$image);
+    }
+    $_SESSION['message'] = 'Event Deleted Successfully';
+    header('Location:view_events.php');
+    exit(0);
+  }
+  else
   {
-    
-      if(file_exists('../images/'.$image)){
-        unlink("../images/".$image);      
-      }
-    
-    $_SESSION['message'] = "Event Removed Successfully";
-    header('Location: view_events.php ');
+    $_SESSION['message'] = 'Event Deletion Failed';
+    header('Location:view_events.php');
     exit(0);
   }
-  else{
-    $_SESSION['message'] = "Event Remove Failed!";
-    header('Location: view_events.php');
-    exit(0);
-  }
+}
 
 
 
-  }
+
+  
   
 
 

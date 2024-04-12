@@ -1,0 +1,97 @@
+
+.main{
+  height:100%;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top:50px;
+}
+.container{
+  
+  padding:0.5vw 0;
+  width:500px;
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid rgba(87, 86, 86, 0.1);
+  box-shadow: #e1dede 0 0 3px;
+
+}
+.container h1{
+  text-align: center;
+  padding:0 0 5px 0;
+  font-size: 2.5vw;
+}
+.login_link{
+  text-align: center;
+  font-size: 1.2vw;
+  
+}
+.login_link a{
+  text-decoration: none;
+  color:#FF8264;
+}
+.container form{
+  padding: 0 40px;
+}
+form .txt-field{
+  position:relative;
+  border-bottom:2px solid #adadad;
+  margin:40px 0;
+}
+.txt-field input{
+  width:100%;
+  padding:0 5px;
+  height:40px;
+  font-size: 1.2vw;
+  border:none;
+  background: none;
+  outline:none;
+}
+.txt-field label{
+  position: absolute;
+  top:50%;
+  left:5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 1.2vw;
+  pointer-events: none;
+  transition: .5s;
+}
+.txt-field span::before{
+  content : '';
+  position: absolute;
+  top: 40px;
+  left : 0;
+  width: 0%;
+  height: 2px;
+  background:lightseagreen;
+  transition: .5s;
+}
+.txt-field input:focus ~ label,
+.txt-field input:valid ~ label{
+  top: -5px;
+  color:#FF8264;
+}
+.txt-field input:focus ~ span::before,
+.txt-field input:valid ~ span::before{
+  width:100%;
+}
+
+button{
+  padding:0.5vw 0;
+  width:100%;
+  background-color: lightseagreen;
+  border: none;
+  font-size: 1.2vw;
+  color:white;
+  cursor:pointer;
+  border-radius: 5px;
+  transition: .5s;
+}
+button:hover{
+  background-color: #FF8264;
+}
+.g-signin2{
+  width:50px;
+}
