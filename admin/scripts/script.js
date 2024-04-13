@@ -1,4 +1,4 @@
-// SIDEBAT TOOGLE
+// SIDEBAR TOOGLE
 
 let sidebarOpen = false;
 let sidebar = document.getElementById( "sidebar" );
@@ -15,4 +15,9 @@ function closeSidebar(){
     sidebarOpen = false;
   }
 }
+
+$(document).ready(function() {
+  // Initialize Bootstrap dropdowns
+  $('.dropdown-toggle').dropdown();
+});
 

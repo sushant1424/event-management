@@ -23,7 +23,7 @@ include("authentication.php");
   ?>
 
   <main class="main-container">
-    
+  
     <div class="container-fluid px-4">
       <h4 class="mt-4">Users</h4>
       <ol class="breadcrumb mb-4">
@@ -44,7 +44,7 @@ include("authentication.php");
             </h4>
         </div>
         <div class="card-body">
-          <table class="table table-bordered" id="myTable">
+          <table class="table table-bordered table-striped" id="myTable">
             <thead>
               <tr>
                 <th>User ID</th>
@@ -52,8 +52,8 @@ include("authentication.php");
                 <th>Phone</th>
                 <th>Email</th>
                 <th>Roles</th>
-                <th>Edit</th>
-                <th>Delete</th>
+                <th>Action</th>
+                
               </tr>
             </thead>
             <tbody>
@@ -80,10 +80,24 @@ include("authentication.php");
                           }
                           ?>
                         </td>
-                        <td><a href="edit_user.php?id=<?= $row['u_id'];?>"  class="btn btn-danger">Edit</a></td>
                         <td>
-                          <button type="button"  value="<?=$row['u_id'];?>" class="btn btn-success delete_user">Delete</button>
+                        <div class="dropdown">
+        <button class="btn btn-success dropdown-toggle" type="button" id="actionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Action
+        </button>
+        <div class="dropdown-menu" aria-labelledby="actionDropdown">
+            <!-- Dropdown option for editing a user -->
+            <a href="edit_user.php?id=<?= $row['u_id'];?>"  class="btn btn-danger dropdown-item edit-user">Edit</a>
+            <!-- Dropdown option for deleting a user -->
+            <a class="dropdown-item delete-user btn btn-danger"  value="<?=$row['u_id'];?>" class="btn btn-success delete_user" >Delete</a>
+        </div>
+    </div>
                         </td>
+                       
+                        
+                          
+                          
+                        
                     </tr>
                     <?php
                   }

@@ -64,11 +64,25 @@
 
 /*Small <=768px */
 @media screen and (max-width:768px){
+  #sidebar{
+    display: none;
+  }
+  
+  .sidebar-title > span {
+    display:inline;
+  }
   
 }
 
 /*Extra Small <=576px */
 @media screen and (max-width:576px) {
+  #sidebar{
+    display: none;
+  }
+  
+  .sidebar-title > span {
+    display:inline;
+  }
   
   
 }
