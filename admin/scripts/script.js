@@ -16,8 +16,29 @@ function closeSidebar(){
   }
 }
 
+// datatable
+$(document).ready( function () {
+  $('#myTable').DataTable();
+});
+
+
+
 $(document).ready(function() {
   // Initialize Bootstrap dropdowns
   $('.dropdown-toggle').dropdown();
 });
+
+
+// summernote
+$(document).ready(function() {
+  $("#summernote").summernote();
+    $('.dropdown-toggle').dropdown();
+});
+
+$('#summernote').summernote({
+  placeholder: 'Type Your Description',
+  
+  height: 300
+});
+  
 
