@@ -10,13 +10,16 @@
   
     <?php
     session_start();
-    require_once "header.php";
+    $page_title = "Home Page";
+    $meta_description = "Home Page";
+    $meta_keyword = "Events";
+    include "header.php";
     ?>
     <div class="content">
       <div class="left">
         <h1>Elevate Your <span>Events</span> and <span>Memories</span> With Us.</h1>
         <p>Looking for a great place to organize and manage your events? You are in the right place.</p>
-        <a href="login.php"><button>Explore now</button></a>
+        <a href="category.php?category_title=social-events"><button>Explore now</button></a>
       </div>
       <div class="right">
           <img src="../images/coverimage.jpg" alt="Event Cover Picture"/>

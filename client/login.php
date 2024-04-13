@@ -20,6 +20,7 @@
       header("Location: index.php");
       exit(0);
   }
+  
   require_once "header.php";
   ?>
   <div class="main">

@@ -16,6 +16,8 @@ function closeSidebar(){
   }
 }
 
+
+
 // datatable
 $(document).ready( function () {
   $('#myTable').DataTable();
@@ -23,10 +25,7 @@ $(document).ready( function () {
 
 
 
-$(document).ready(function() {
-  // Initialize Bootstrap dropdowns
-  $('.dropdown-toggle').dropdown();
-});
+
 
 
 // summernote

@@ -1,31 +1,38 @@
 .events_container{
-  padding:2vw 5vw;
+  padding:0 5vw;
 }
-.categories{
-  height:60px;
-  width:100%;
-  background-color: #faf9f9;
+.categories {
+  height: 70px;
+  width: 100%;
+  background-color: #ffff; /* Light gray background */
+  border-radius: 0; /* Rounded corners */
   display: flex;
-  border-radius: 35px;
-  border:1px solid #000000; 
-  padding:0 2vw;
+  overflow: hidden; /* Hide overflowing content */
+  box-shadow: 4px 2px 4px 2px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  margin-top: 20px; /* Add some space between the navbar and categories */
+  
 }
-.categories li{
-  width:100%;
+
+.categories li {
+  flex-grow: 1; /* Grow to fill available space */
   list-style-type: none;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-
 }
 
-.categories li a{
+.categories li a {
   text-decoration: none;
-  color:black;
-  padding:1vw 2vw;
-  transition: all 0.5s;
-  border-radius: 15px;
+  color: #444; /* Darker text color */
+  padding: 20px; /* Increased padding */
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center align content horizontally */
+  align-items: center; /* Center align content vertically */
+  font-family: 'Roboto', sans-serif; /* Use custom font */
+  font-weight: bold; /* Bold font weight */
 }
-.categories a:hover{
-  background-color: #b1a7a6;
+
+.categories li a:hover {
+  background-color: #e0e0e0; /* Lighter gray hover background */
+  color: #222; /* Darker text color on hover */
+  border-bottom: 3px solid #f9a825; /* Yellow bottom border on hover */
+  transform: translateY(-2px); /* Move the button slightly up on hover */
 }

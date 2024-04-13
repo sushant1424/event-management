@@ -91,7 +91,7 @@ include('authentication.php');
   </div>
   <div class="col-md-12 mb-3">
     <label for="">Description</label>
-    <textarea name="description" class="form-control"  rows="4"><?=$row['description']?></textarea>
+    <textarea name="description" id="summernote" class="form-control"  rows="4"><?=htmlentities($row['description']);?></textarea>
   </div>
   <div class="col-md-12 mb-3">
     <label for="">Image</label>

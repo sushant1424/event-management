@@ -23,6 +23,7 @@
   <div class="grid-container">
 
     <!-- header -->
+   
     <?php
      include('header.php');
     ?>

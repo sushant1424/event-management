@@ -1,5 +1,6 @@
 <?php
 include("authentication.php");
+include("header.php");
  
 //---------delete users-----------------//
 if(isset($_POST['delete_user']))
@@ -227,7 +228,7 @@ if(isset($_POST['update_events']))
   $meta_title = $_POST['meta_title'];
   $meta_description = $_POST['meta_description'];
   $meta_keyword = $_POST['meta_keyword'];
-  $status = $_POST['status'] == true ? '1' : '0';
+  $status = isset($_POST['status']) && $_POST['status'] == true ? '1' : '0';
 
   
   $query = "UPDATE events SET c_id = '$category_id',name = '$name', slug = '$slug', description = '$description' ,image='$update_filename', meta_title = '$meta_title' , meta_description = '$meta_description', meta_keyword = '$meta_keyword' , status = '$status' where e_id = '$events_id'";
@@ -253,7 +254,8 @@ if(isset($_POST['update_events']))
     exit(0);
   }
   }
-  //---------------delete events------------------//
+ 
+//---------------delete events------------------//
 if(isset($_POST['delete_events']))
 {
   $events_id = $_POST['delete_events'];
@@ -263,7 +265,7 @@ if(isset($_POST['delete_events']))
 
   $check_img_query = "SELECT * FROM events where e_id = '$events_id' limit 1";
   $img_res = mysqli_query($conn, $check_img_query);
-  $res_data = mysqli_fetch_all( $img_res );
+  $res_data = mysqli_fetch_assoc($img_res);
   $image = $res_data['image'];
 
   if($query_run){
@@ -283,6 +285,7 @@ if(isset($_POST['delete_events']))
 }
 
 
+include('footer.php');
 
 
   

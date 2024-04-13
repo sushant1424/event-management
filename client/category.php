@@ -33,7 +33,6 @@
                   foreach($event_run as $event_item)
                   {
                     ?>
-
       <div class="card">
         <div class="card_header">
           <h3><?= $event_item['name']?></h3>
@@ -42,10 +41,8 @@
           <img src="../images/<?=$event_item['image'];?>" alt="" width="100%" height="80px">
         </div>
         <div class="card_footer">
-          <a href="">
-            <p class="view_details">View Details</p>
-          </a>
-          <button>Get in</button>
+          
+          <a href="event_view.php?event_title=<?= $event_item['slug'];?>"><button>Get in</button></a>
         </div>
       </div>
 
