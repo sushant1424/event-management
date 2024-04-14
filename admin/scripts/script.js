@@ -39,5 +39,18 @@ $('#summernote').summernote({
   
   height: 300
 });
+
+$(document).ready(function (){
+
+  $('.delete_user').click(function(e){
+    e.preventDefault();
+    swal("Hello");
+  }
+);
+});
+
+$(document).ready(function() {
+  $('.selectpicker').selectpicker();
+});
   
 
