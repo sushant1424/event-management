@@ -55,7 +55,7 @@ include('authentication.php');
 
   if(mysqli_num_rows( $category_run ) > 0) {
     ?>
-        <select name="category_id" required class="form-control">
+        <select name="category_id"  required class="selectpicker show-tick"  data-live-search="true" data-wdith="100%" data-size="4">
           
     <option value="">Select Category</option>
     <?php
