@@ -46,6 +46,8 @@
 .sidebar-responsive{
   display:inline !important;
   position: absolute;
+  z-index: 999;
+
 }
 
 /* ------------media queries ------------*/
